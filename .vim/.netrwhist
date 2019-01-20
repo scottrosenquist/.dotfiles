@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/scott.rosenquist/.tmux'
-let g:netrw_dirhist_2='/Users/scott.rosenquist/Library/Python/2.7/lib/python/site-packages/powerline/config_files/themes/shell'
-let g:netrw_dirhist_3='/Users/scott.rosenquist/Code/Mobile/Giant Tiger/white-label/www_base/components/global/modules/mct-form-fields'
-let g:netrw_dirhist_4='/Users/scott.rosenquist/.config/powerline/themes/vim'
-let g:netrw_dirhist_5='/Users/scott.rosenquist/.config'
-let g:netrw_dirhist_6='/Users/scott.rosenquist/.ssh'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/scott.rosenquist/code/web/drupal/sites/all/modules/custom/shopping_list/app/overview'
