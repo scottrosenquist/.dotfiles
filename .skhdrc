@@ -73,7 +73,7 @@
 alt - return : osascript -e 'if application "iTerm" is running then' -e 'tell application "iTerm" to create window with default profile' -e 'else' -e 'activate application "iTerm"' -e 'end if'
 
 # open qutebrowser
-## alt + shift - return : ~/Scripts/qtb.sh
+alt + shift - return : ~/.scripts/qtb.sh
 
 # open mpv
 ## alt - m : open -na /Applications/mpv.app $(pbpaste)

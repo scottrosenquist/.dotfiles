@@ -2,6 +2,8 @@ set nocompatible
 
 filetype indent plugin on
 
+set autoindent
+
 syntax on
 
 set mouse=a
@@ -113,6 +115,16 @@ map Y y$
 
 set backspace=eol
 
-:nnoremap <BS> <Nop>
+nnoremap <BS> <Nop>
 
 set wildmenu
+
+colorscheme pencil
+set background=light
+
+autocmd FileType javascript setlocal ts=2 sw=2 expandtab
+autocmd FileType html setlocal ts=2 sw=2 expandtab
+"" autocmd FileType htmlcheetah setlocal ts=2 sw=2 expandtab
+autocmd FileType scss setlocal ts=2 sw=2 expandtab
+"" autocmd FileType tmpl setlocal syntax=html
+
