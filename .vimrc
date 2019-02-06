@@ -1,6 +1,6 @@
 set nocompatible
 
-filetype indent plugin on
+"" filetype indent plugin on
 
 set autoindent
 
@@ -119,8 +119,13 @@ nnoremap <BS> <Nop>
 
 set wildmenu
 
-colorscheme pencil
+" set Vim-specific sequences for RGB colors
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 set background=light
+colorscheme pencil
 
 autocmd FileType javascript setlocal ts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sw=2 expandtab
@@ -128,3 +133,4 @@ autocmd FileType html setlocal ts=2 sw=2 expandtab
 autocmd FileType scss setlocal ts=2 sw=2 expandtab
 "" autocmd FileType tmpl setlocal syntax=html
 
+filetype indent plugin on
