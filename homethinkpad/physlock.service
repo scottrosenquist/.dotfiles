@@ -1,0 +1,14 @@
+[Unit]
+Description=Lock On Suspend
+Before=sleep.target
+
+[Service]
+;Type=forking
+;User=scott
+;ExecStart=/home/scott/.scripts/serviceworked
+ExecStart=/usr/bin/physlock
+;Restart=on-failure
+;Environment=SYSTEMD_LOG_LEVEL=debug
+
+[Install]
+WantedBy=sleep.target

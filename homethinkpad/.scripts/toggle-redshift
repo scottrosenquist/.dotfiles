@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$(pidof -s redshift)" ]
+then
+  pkill redshift
+else
+  redshift &
+fi
