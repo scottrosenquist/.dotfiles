@@ -1,0 +1,38 @@
+#! /bin/sh
+
+sxhkd &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+#bspc config border_width         3
+#bspc config window_gap           5
+bspc config border_width         5
+bspc config window_gap           5
+#bspc config window_gap 0
+
+#bspc config bottom_padding 0
+
+bspc config split_ratio          0.50
+#bspc config borderless_monocle   true
+#bspc config gapless_monocle      true
+
+bspc config initial_polarity	first_child
+
+bspc config focused_border_color '#20bbfc'
+bspc config normal_border_color '#424242'
+#bspc config normal_border_color '#d9d9d9'
+
+bspc config focus_follows_pointer true
+#bspc config pointer_follows_focus true
+
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
+
+bspc rule -a Zathura state=tiled
+
+bspc config single_monocle true
+bspc config left_monocle_padding 859
+bspc config right_monocle_padding 859
+
+#.config/bspwm/singlewindowpadding &

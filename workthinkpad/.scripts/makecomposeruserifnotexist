@@ -1,0 +1,3 @@
+#!/bin/bash
+BUILD_USER=composer
+if [ ! `id -u "${BUILD_USER}"` ]; then adduser -S "${BUILD_USER}"; fi;

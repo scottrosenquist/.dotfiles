@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ ! -f /tmp/notifystatusshow ]
+then
+  #touch /tmp/notifystatusshow
+
+  desktops=$(bspc query -D --names)
+  occupied=$(bspc query -D -d .occupied --names)
+  focused=$(bspc query -D -d .focused --names)
+  bspwm=""
+  while read -r line; do
+    if [ "$line" == "$focused" ]
+    then
+      bspwm+="$focused* "
+    elif [[ $occupied =~ $line ]]
+    then
+      bspwm+="$line  "
+    fi
+  done <<< "$desktops"
+
+  
+  time=$(date +%I:%M%P)
+  date=$(date +%d/%m/%Y)
+  battery=$(acpi)
+
+  status="$bspwm\n\n$time\n$date\n\n$battery"
+
+  notify-send --expire-time=3000 "$(echo -e "$status")"
+fi
