@@ -427,6 +427,7 @@ c.aliases = {
 ## are no scrollbars.
 ## Type: Bool
 # c.completion.shrink = False
+c.completion.shrink = True
 
 ## Format of timestamps (e.g. for the history completion).
 ## Type: TimestampTemplate
@@ -1074,7 +1075,7 @@ c.keyhint.delay = 1000000
 ##   - tab-bg-silent: Open a new background tab in the existing window without activating the window.
 ##   - window: Open in a new window.
 # c.new_instance_open_target = 'tab'
-c.new_instance_open_target = 'window'
+c.new_instance_open_target = 'tab-silent'
 
 ## Which window to choose when opening links as new tabs. When
 ## `new_instance_open_target` is not set to `window`, this is ignored.
@@ -1340,6 +1341,7 @@ c.tabs.last_close = 'close'
 ## Switch between tabs using the mouse wheel.
 ## Type: Bool
 # c.tabs.mousewheel_switching = True
+c.tabs.mousewheel_switching = False
 
 ## Position of new tabs opened from another tab.
 ## Type: NewTabPosition
@@ -1439,7 +1441,7 @@ c.tabs.pinned.shrink = False
 ## Wrap when changing tabs.
 ## Type: Bool
 # c.tabs.wrap = True
-c.tabs.wrap = False
+### c.tabs.wrap = False
 
 ## What search to start when something else than a URL is entered.
 ## Type: String

@@ -1,5 +1,5 @@
 systemctl --user import-environment DISPLAY
-autorandr -c &
+autorandr -c
 #xrandr --dpi 144
 #urxvt &
 xrdb ~/.Xresources

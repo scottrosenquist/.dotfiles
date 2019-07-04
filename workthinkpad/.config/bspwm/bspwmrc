@@ -32,7 +32,7 @@ bspc config merge_overlapping_monitors true
 bspc rule -a Zathura state=tiled
 
 bspc config single_monocle true
-bspc config left_monocle_padding 859
-bspc config right_monocle_padding 859
+#bspc config left_monocle_padding 859
+#bspc config right_monocle_padding 859
 
 #.config/bspwm/singlewindowpadding &
