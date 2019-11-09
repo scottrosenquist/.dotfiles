@@ -934,7 +934,7 @@ c.editor.command = ['urxvt', '-e', 'vim', '-f', '{file}', '-c', 'normal {line}G{
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
-# c.hints.chars = 'asdfghjkl'
+c.hints.chars = 'arstdhneio'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
@@ -1523,6 +1523,7 @@ c.url.start_pages = ['about:blank']
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
 # config.bind('.', 'repeat-command')
+config.unbind('.')
 # config.bind('/', 'set-cmd-text /')
 # config.bind(':', 'set-cmd-text :')
 # config.bind(';I', 'hint images tab')
@@ -1556,7 +1557,11 @@ c.url.start_pages = ['about:blank']
 ## config.bind('<Ctrl-E>', 'scroll down')
 config.bind('<Ctrl-E>', 'scroll-page 0 0.025')
 # config.bind('<Ctrl-F>', 'scroll-page 0 1')
+config.bind('<Ctrl-H>', 'tab-prev')
+config.bind('<Ctrl-I>', 'forward')
+config.bind('<Ctrl-L>', 'tab-next')
 # config.bind('<Ctrl-N>', 'open -w')
+config.bind('<Ctrl-O>', 'back')
 # config.bind('<Ctrl-PgDown>', 'tab-next')
 # config.bind('<Ctrl-PgUp>', 'tab-prev')
 # config.bind('<Ctrl-Q>', 'quit')
@@ -1586,14 +1591,19 @@ config.bind('<Ctrl-Y>', 'scroll-page 0 -0.025')
 # config.bind('=', 'zoom')
 # config.bind('?', 'set-cmd-text ?')
 # config.bind('@', 'run-macro')
+config.bind('@:', 'repeat-command')
 # config.bind('B', 'set-cmd-text -s :quickmark-load -t')
 # config.bind('D', 'tab-close -o')
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
 # config.bind('H', 'back')
+config.unbind('H')
 # config.bind('J', 'tab-next')
+config.unbind('J')
 # config.bind('K', 'tab-prev')
+config.unbind('K')
 # config.bind('L', 'forward')
+config.unbind('L')
 # config.bind('M', 'bookmark-add')
 # config.bind('N', 'search-prev')
 # config.bind('O', 'set-cmd-text -s :open -t')

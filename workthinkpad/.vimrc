@@ -143,7 +143,7 @@ set backupdir=~/.vim/backup//
 set undodir=~/.vim/undo//
 
 " Show current line number and relative line numbers
-set number relativenumber
+" set number relativenumber
 
 " 2 spaces per tab
 set tabstop=2
@@ -200,7 +200,7 @@ set wildignore+=*/misc/*
 " Exclude project root folders from VimGrep (and possibly other places)
 set wildignore+=includes/*
 set wildignore+=misc/*
-set wildignore+=modules/*
+" set wildignore+=modules/*
 set wildignore+=profiles/*
 set wildignore+=scripts/*
 " set wildignore+=sites/*
@@ -213,3 +213,21 @@ set wildignore+=*.png
 set wildignore+=*.otf
 set wildignore+=*.jpg
 set wildignore+=*.ttf
+
+" Hide the netrw banner
+let g:netrw_banner = 0
+
+" Always show netrw in tree view
+let g:netrw_liststyle = 3
+
+" Show zero lines of context around the cursor.
+set scrolloff=0
+
+" Break lines on words
+set linebreak
+
+" Indent wrapped lines
+set breakindent
+
+" Show ↳ in broken lines
+set showbreak=↳\ 

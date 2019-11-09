@@ -3,6 +3,8 @@ autorandr -c
 #xrandr --dpi 144
 #urxvt &
 xrdb ~/.Xresources
+
+xmodmap ~/.Xmodmap
 #map escape to caps lock
 #setxkbmap -option caps:escape
 #disable trackpad

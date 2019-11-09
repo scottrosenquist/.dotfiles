@@ -30,9 +30,11 @@ bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
 bspc rule -a Zathura state=tiled
+bspc rule -a Slack sticky=on state=floating center=true
 
 bspc config single_monocle true
 #bspc config left_monocle_padding 859
 #bspc config right_monocle_padding 859
 
-#.config/bspwm/singlewindowpadding &
+~/.scripts/monocleborder
+
