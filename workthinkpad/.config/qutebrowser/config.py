@@ -13,7 +13,8 @@
 c.aliases = {
         'w': 'session-save',
         'q': 'close',
-        'wq': 'quit --save'
+        'wq': 'quit --save',
+        'b': 'buffer'
 }
 
 ## Time interval (in milliseconds) between auto-saves of
@@ -436,6 +437,7 @@ c.completion.shrink = True
 ## Execute the best-matching command on a partial match.
 ## Type: Bool
 # c.completion.use_best_match = False
+c.completion.use_best_match = True
 
 ## A list of patterns which should not be shown in the history. This only
 ## affects the completion. Matching URLs are still saved in the history
@@ -860,6 +862,7 @@ c.editor.command = ['urxvt', '-e', 'vim', '-f', '{file}', '-c', 'normal {line}G{
 ## setting, it's replaced with the fonts listed here.
 ## Type: Font
 # c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = 'JetBrains Mono'
 
 ## Font used for prompts.
 ## Type: Font
@@ -1125,7 +1128,7 @@ c.new_instance_open_target = 'tab-silent'
 ## this, it's possible to set font sizes and the `zoom.default` setting.
 ## Type: Bool
 # c.qt.highdpi = False
-c.qt.highdpi = True
+#c.qt.highdpi = True
 
 ## When to use Chromium's low-end device mode. This improves the RAM
 ## usage of renderer processes, at the expense of performance.
@@ -1579,7 +1582,7 @@ config.bind('<Ctrl-O>', 'back')
 ## config.bind('<Ctrl-Y>', 'scroll up')
 config.bind('<Ctrl-Y>', 'scroll-page 0 -0.025')
 # config.bind('<Ctrl-^>', 'tab-focus last')
-# config.bind('<Ctrl-h>', 'home')
+# config.bind('<Ctrl-h>', 'home') # rebound as tab-prev
 # config.bind('<Ctrl-p>', 'tab-pin')
 # config.bind('<Ctrl-s>', 'stop')
 # config.bind('<Escape>', 'clear-keychain ;; search ;; fullscreen --leave')
@@ -1597,7 +1600,7 @@ config.bind('@:', 'repeat-command')
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
 # config.bind('H', 'back')
-config.unbind('H')
+config.bind('H', 'home')
 # config.bind('J', 'tab-next')
 config.unbind('J')
 # config.bind('K', 'tab-prev')

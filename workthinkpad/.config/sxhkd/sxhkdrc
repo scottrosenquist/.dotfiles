@@ -159,8 +159,8 @@ super + n
   ./.scripts/notifystatus
 
 # screenshot
-#Print
-#  flameshot gui
+Print
+  flameshot gui
 
 # slack
 super + s
@@ -168,3 +168,6 @@ super + s
 
 super + a
   autorandr -c
+
+super + z
+  xzoom

@@ -4,9 +4,10 @@ autorandr -c
 #urxvt &
 xrdb ~/.Xresources
 
-xmodmap ~/.Xmodmap
+#xmodmap ~/.Xmodmap
 #map escape to caps lock
 #setxkbmap -option caps:escape
+setxkbmap -option
 #disable trackpad
 #xinput --disable 11
 ~/.scripts/disable-trackpad
