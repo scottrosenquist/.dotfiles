@@ -1,0 +1,2 @@
+#!/bin/bash
+python ~/.source/amphetype/Amphetype.py & disown
