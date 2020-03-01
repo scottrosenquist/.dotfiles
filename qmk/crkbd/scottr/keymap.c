@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, KC_ALTA, KC_GUIR, KC_CTLS, KC_SFTT,    KC_G,                         KC_M, KC_SFTN, KC_CTLE, KC_GUII, KC_ALTO, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H, KC_COMM,  KC_DOT, XXXXXXX, XXXXXXX,\
+      XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H, KC_COMM,  KC_DOT, KC_QUOT, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                            KC_ESC,  SLOWER,  CNUMBE,    KC_SLSH,  ERAISE, KC_BSPC \
   ),
@@ -117,17 +117,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, S(KC_A), S(KC_R), S(KC_S), S(KC_T), S(KC_G),                      S(KC_M), S(KC_N), S(KC_E), S(KC_I), S(KC_O), XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, S(KC_Z), S(KC_X), S(KC_C), S(KC_D), S(KC_V),                      S(KC_K), S(KC_H),   KC_LT,   KC_GT, XXXXXXX, XXXXXXX,\
+      XXXXXXX, S(KC_Z), S(KC_X), S(KC_C), S(KC_D), S(KC_V),                      S(KC_K), S(KC_H),  KC_GRV, KC_EXLM, KC_DQUO, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                            S_ESC,  KC_TAB, KC_COLN,    KC_QUES,   S_ENT,  KC_DEL \
   ),
   [_LOWER] = LAYOUT( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, XXXXXXX,\
+      XXXXXXX, XXXXXXX,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_TILD, KC_UNDS, KC_PLUS, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_LCBR, KC_RCBR, KC_PIPE, KC_DQUO, XXXXXXX,\
+      XXXXXXX, KC_TILD, KC_UNDS, KC_PLUS, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_LCBR, KC_RCBR, KC_PIPE, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX,   KC_LT,   KC_GT, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX,  SLOWER, XXXXXXX,    XXXXXXX,  ERAISE, XXXXXXX \
                                       //`--------------------------'  `--------------------------'
@@ -137,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,  KC_GRV, KC_MINS,  KC_EQL, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_LBRC, KC_RBRC, KC_BSLS, KC_QUOT, XXXXXXX,\
+      XXXXXXX, XXXXXXX, KC_MINS,  KC_EQL, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_LBRC, KC_RBRC, KC_BSLS, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|

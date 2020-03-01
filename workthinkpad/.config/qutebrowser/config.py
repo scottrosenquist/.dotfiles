@@ -49,6 +49,30 @@ c.aliases = {
 ## Type: Dict
 # c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
 
+## Colour variables
+lighter_gray = '#E5E6E6'
+white = '#F1F1F1'
+light_black = '#424242'
+dark_green = '#10A778'
+green = '#5FD7A7'
+dark_cyan = '#20A5BA'
+dark_blue = '#008EC4'
+
+dark_cyan = dark_blue
+
+lighter_gray = white
+
+##bg = white
+##bg_subtle = light_gray
+##bg_very_subtle = lighter_gray
+##norm = light_black
+##norm_subtle = lighter_black
+##purple = dark_purple
+##cyan = dark_cyan
+##green = dark_green
+##red = dark_red
+##visual = light_blue
+
 ## Background color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
@@ -248,10 +272,12 @@ c.aliases = {
 ## Background color of the statusbar in command mode.
 ## Type: QssColor
 # c.colors.statusbar.command.bg = 'black'
+c.colors.statusbar.command.bg = lighter_gray
 
 ## Foreground color of the statusbar in command mode.
 ## Type: QssColor
 # c.colors.statusbar.command.fg = 'white'
+c.colors.statusbar.command.fg = light_black
 
 ## Background color of the statusbar in private browsing + command mode.
 ## Type: QssColor
@@ -264,18 +290,22 @@ c.aliases = {
 ## Background color of the statusbar in insert mode.
 ## Type: QssColor
 # c.colors.statusbar.insert.bg = 'darkgreen'
+c.colors.statusbar.insert.bg = lighter_gray
 
 ## Foreground color of the statusbar in insert mode.
 ## Type: QssColor
 # c.colors.statusbar.insert.fg = 'white'
+c.colors.statusbar.insert.fg = light_black
 
 ## Background color of the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.normal.bg = 'black'
+c.colors.statusbar.normal.bg = lighter_gray
 
 ## Foreground color of the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.normal.fg = 'white'
+c.colors.statusbar.normal.fg = light_black
 
 ## Background color of the statusbar in passthrough mode.
 ## Type: QssColor
@@ -296,6 +326,7 @@ c.aliases = {
 ## Background color of the progress bar.
 ## Type: QssColor
 # c.colors.statusbar.progress.bg = 'white'
+c.colors.statusbar.progress.bg = light_black
 
 ## Foreground color of the URL in the statusbar on error.
 ## Type: QssColor
@@ -304,20 +335,24 @@ c.aliases = {
 ## Default foreground color of the URL in the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.url.fg = 'white'
+c.colors.statusbar.url.fg = light_black
 
 ## Foreground color of the URL in the statusbar for hovered links.
 ## Type: QssColor
 # c.colors.statusbar.url.hover.fg = 'aqua'
+c.colors.statusbar.url.hover.fg = dark_cyan
 
 ## Foreground color of the URL in the statusbar on successful load
 ## (http).
 ## Type: QssColor
 # c.colors.statusbar.url.success.http.fg = 'white'
+c.colors.statusbar.url.success.http.fg = light_black
 
 ## Foreground color of the URL in the statusbar on successful load
 ## (https).
 ## Type: QssColor
 # c.colors.statusbar.url.success.https.fg = 'lime'
+c.colors.statusbar.url.success.https.fg = dark_green
 
 ## Foreground color of the URL in the statusbar when there's a warning.
 ## Type: QssColor
