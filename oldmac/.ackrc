@@ -1,5 +1,0 @@
---smart-case
---type-set=minmap:ext:map
---nominmap
---ignore-dir=build
---ignore-dir=.tmp

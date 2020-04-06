@@ -1,7 +1,0 @@
-.DS_Store
-.config/configstore
-.config/fish
-.tmux/resurrect
-.vim/swap/*
-.vim/undo/*
-.vim/backup/*
