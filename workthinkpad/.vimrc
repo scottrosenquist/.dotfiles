@@ -33,6 +33,12 @@ endif
 " Fix mouse support for urxvt
 set ttymouse=urxvt
 
+" Treat hyphens as part of words
+set iskeyword+=-
+
+" Treat dollarsigns as part of words
+set iskeyword+=$
+
 " Highlight all previous and current search patterns
 if has('extra_search')
   set hlsearch
@@ -46,6 +52,7 @@ autocmd VimResized * wincmd =
 
 " Use pencil colour theme [https://github.com/reedes/vim-colors-pencil]
 let g:pencil_terminal_italics = 1
+let g:pencil_neutral_headings = 1
 colorscheme pencil
 
 " Hide the netrw banner

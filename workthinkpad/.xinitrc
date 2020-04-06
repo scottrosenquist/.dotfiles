@@ -18,7 +18,7 @@ xsetroot -cursor_name left_ptr
 ##hsetroot -solid '#f1f1f1'
 eval $(ssh-agent)
 ##HOME/.config/polybar/polybar.sh &
-redshift &
+##redshift &
 #dunst &
 flameshot &
 # compton &

@@ -49,90 +49,147 @@ c.aliases = {
 ## Type: Dict
 # c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
 
-## Colour variables
-lighter_gray = '#E5E6E6'
+# Colors
+black = '#212121'
+medium_gray = '#767676'
 white = '#F1F1F1'
+actual_white = '#FFFFFF'
 light_black = '#424242'
-dark_green = '#10A778'
-green = '#5FD7A7'
-dark_cyan = '#20A5BA'
+lighter_black = '#545454'
+
+# if g:pencil_higher_contrast_ui == 0
+# darker shadow and whiter grays
+subtle_black = '#262626'
+light_gray = '#D9D9D9'
+lighter_gray = '#E5E6E6'
+# else
+# lighter shadows and darker grays
+#subtle_black = '#303030'
+#light_gray = '#B2B2B2'
+#lighter_gray = '#C6C6C6'
+# endif
+
+pink = '#fb007a'
+dark_red = '#C30771'
+light_red = '#E32791'
+orange = '#D75F5F'
+
+darker_blue = '#005F87'
 dark_blue = '#008EC4'
+blue = '#20BBFC'
+light_blue = '#b6d6fd'
+dark_cyan = '#20A5BA'
+light_cyan = '#4FB8CC'
 
-dark_cyan = dark_blue
+dark_green = '#10A778'
+light_green = '#5FD7A7'
 
-lighter_gray = white
+dark_purple = '#523C79'
+light_purple = '#6855DE'
 
-##bg = white
-##bg_subtle = light_gray
-##bg_very_subtle = lighter_gray
-##norm = light_black
-##norm_subtle = lighter_black
-##purple = dark_purple
-##cyan = dark_cyan
-##green = dark_green
-##red = dark_red
-##visual = light_blue
+yellow = '#F3E430'
+dark_yellow = '#A89C14'
+
+background = 'light'
+
+if background == 'dark':
+    bg = black
+    bg_subtle = light_black
+    bg_very_subtle = subtle_black
+    norm = lighter_gray
+    norm_subtle = light_gray
+    purple = light_purple
+    cyan = light_cyan
+    green = light_green
+    red = light_red
+    visual = lighter_black
+else:
+    bg = white
+    bg_subtle = light_gray
+    bg_very_subtle = lighter_gray
+    norm = light_black
+    norm_subtle = lighter_black
+    purple = dark_purple
+    cyan = dark_cyan
+    green = dark_green
+    red = dark_red
+    visual = light_blue
 
 ## Background color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
+c.colors.completion.category.bg = bg_very_subtle
 
 ## Bottom border color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.border.bottom = 'black'
+c.colors.completion.category.border.bottom = bg_very_subtle
 
 ## Top border color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.category.border.top = 'black'
+c.colors.completion.category.border.top = bg_very_subtle
 
 ## Foreground color of completion widget category headers.
 ## Type: QtColor
 # c.colors.completion.category.fg = 'white'
+c.colors.completion.category.fg = norm
 
 ## Background color of the completion widget for even rows.
 ## Type: QssColor
 # c.colors.completion.even.bg = '#333333'
+c.colors.completion.even.bg = bg
 
 ## Text color of the completion widget. May be a single color to use for
 ## all columns or a list of three colors, one for each column.
 ## Type: List of QtColor, or QtColor
 # c.colors.completion.fg = ['white', 'white', 'white']
+c.colors.completion.fg = [norm, norm, norm]
 
 ## Background color of the selected completion item.
 ## Type: QssColor
 # c.colors.completion.item.selected.bg = '#e8c000'
+c.colors.completion.item.selected.bg = visual
 
 ## Bottom border color of the selected completion item.
 ## Type: QssColor
 # c.colors.completion.item.selected.border.bottom = '#bbbb00'
+c.colors.completion.item.selected.border.bottom = visual
 
 ## Top border color of the completion widget category headers.
 ## Type: QssColor
 # c.colors.completion.item.selected.border.top = '#bbbb00'
+c.colors.completion.item.selected.border.top = visual
 
 ## Foreground color of the selected completion item.
 ## Type: QtColor
 # c.colors.completion.item.selected.fg = 'black'
+c.colors.completion.item.selected.fg = norm
 
 ## Foreground color of the matched text in the completion.
 ## Type: QssColor
 # c.colors.completion.match.fg = '#ff4444'
+c.colors.completion.match.fg = red
 
 ## Background color of the completion widget for odd rows.
 ## Type: QssColor
 # c.colors.completion.odd.bg = '#444444'
+c.colors.completion.odd.bg = bg
 
 ## Color of the scrollbar in the completion view.
 ## Type: QssColor
 # c.colors.completion.scrollbar.bg = '#333333'
+c.colors.completion.scrollbar.bg = bg
 
 ## Color of the scrollbar handle in the completion view.
 ## Type: QssColor
 # c.colors.completion.scrollbar.fg = 'white'
+c.colors.completion.scrollbar.fg = norm_subtle
 
 ## Background color for the download bar.
 ## Type: QssColor
 # c.colors.downloads.bar.bg = 'black'
+c.colors.downloads.bar.bg = black
 
 ## Background color for downloads with errors.
 ## Type: QtColor
@@ -141,6 +198,7 @@ lighter_gray = white
 ## Foreground color for downloads with errors.
 ## Type: QtColor
 # c.colors.downloads.error.fg = 'white'
+c.colors.downloads.error.fg = norm
 
 ## Color gradient start for download backgrounds.
 ## Type: QtColor
@@ -149,6 +207,7 @@ lighter_gray = white
 ## Color gradient start for download text.
 ## Type: QtColor
 # c.colors.downloads.start.fg = 'white'
+c.colors.downloads.start.fg = norm
 
 ## Color gradient stop for download backgrounds.
 ## Type: QtColor
@@ -157,6 +216,7 @@ lighter_gray = white
 ## Color gradient end for download text.
 ## Type: QtColor
 # c.colors.downloads.stop.fg = 'white'
+c.colors.downloads.stop.fg = norm
 
 ## Color gradient interpolation system for download backgrounds.
 ## Type: ColorSystem
@@ -180,14 +240,17 @@ lighter_gray = white
 ## for transparency.
 ## Type: QssColor
 # c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))'
+c.colors.hints.bg = yellow
 
 ## Font color for hints.
 ## Type: QssColor
 # c.colors.hints.fg = 'black'
+c.colors.hints.fg = light_black
 
 ## Font color for the matched part of hints.
 ## Type: QssColor
 # c.colors.hints.match.fg = 'green'
+c.colors.hints.match.fg = green
 
 ## Background color of the keyhint widget.
 ## Type: QssColor
@@ -212,18 +275,22 @@ lighter_gray = white
 ## Foreground color of an error message.
 ## Type: QssColor
 # c.colors.messages.error.fg = 'white'
+c.colors.messages.error.fg = norm
 
 ## Background color of an info message.
 ## Type: QssColor
 # c.colors.messages.info.bg = 'black'
+c.colors.messages.info.bg = bg
 
 ## Border color of an info message.
 ## Type: QssColor
 # c.colors.messages.info.border = '#333333'
+c.colors.messages.info.border = bg
 
 ## Foreground color of an info message.
 ## Type: QssColor
 # c.colors.messages.info.fg = 'white'
+c.colors.messages.info.fg = norm
 
 ## Background color of a warning message.
 ## Type: QssColor
@@ -236,10 +303,12 @@ lighter_gray = white
 ## Foreground color of a warning message.
 ## Type: QssColor
 # c.colors.messages.warning.fg = 'white'
+c.colors.messages.warning.fg = norm
 
 ## Background color for prompts.
 ## Type: QssColor
 # c.colors.prompts.bg = '#444444'
+c.colors.prompts.bg = bg
 
 ## Border used around UI elements in prompts.
 ## Type: String
@@ -248,6 +317,7 @@ lighter_gray = white
 ## Foreground color for prompts.
 ## Type: QssColor
 # c.colors.prompts.fg = 'white'
+c.colors.prompts.fg = norm
 
 ## Background color for the selected item in filename prompts.
 ## Type: QssColor
@@ -260,6 +330,7 @@ lighter_gray = white
 ## Foreground color of the statusbar in caret mode.
 ## Type: QssColor
 # c.colors.statusbar.caret.fg = 'white'
+c.colors.statusbar.caret.fg = norm
 
 ## Background color of the statusbar in caret mode with a selection.
 ## Type: QssColor
@@ -268,65 +339,72 @@ lighter_gray = white
 ## Foreground color of the statusbar in caret mode with a selection.
 ## Type: QssColor
 # c.colors.statusbar.caret.selection.fg = 'white'
+c.colors.statusbar.caret.selection.fg = norm
 
 ## Background color of the statusbar in command mode.
 ## Type: QssColor
 # c.colors.statusbar.command.bg = 'black'
-c.colors.statusbar.command.bg = lighter_gray
+c.colors.statusbar.command.bg = bg_very_subtle
 
 ## Foreground color of the statusbar in command mode.
 ## Type: QssColor
 # c.colors.statusbar.command.fg = 'white'
-c.colors.statusbar.command.fg = light_black
+c.colors.statusbar.command.fg = norm
 
 ## Background color of the statusbar in private browsing + command mode.
 ## Type: QssColor
 # c.colors.statusbar.command.private.bg = 'grey'
+c.colors.statusbar.command.private.bg = norm
 
 ## Foreground color of the statusbar in private browsing + command mode.
 ## Type: QssColor
 # c.colors.statusbar.command.private.fg = 'white'
+c.colors.statusbar.command.private.fg = bg
 
 ## Background color of the statusbar in insert mode.
 ## Type: QssColor
 # c.colors.statusbar.insert.bg = 'darkgreen'
-c.colors.statusbar.insert.bg = lighter_gray
+c.colors.statusbar.insert.bg = bg_very_subtle
 
 ## Foreground color of the statusbar in insert mode.
 ## Type: QssColor
 # c.colors.statusbar.insert.fg = 'white'
-c.colors.statusbar.insert.fg = light_black
+c.colors.statusbar.insert.fg = norm
 
 ## Background color of the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.normal.bg = 'black'
-c.colors.statusbar.normal.bg = lighter_gray
+c.colors.statusbar.normal.bg = bg_very_subtle
 
 ## Foreground color of the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.normal.fg = 'white'
-c.colors.statusbar.normal.fg = light_black
+c.colors.statusbar.normal.fg = norm
 
 ## Background color of the statusbar in passthrough mode.
 ## Type: QssColor
 # c.colors.statusbar.passthrough.bg = 'darkblue'
+c.colors.statusbar.passthrough.bg = visual
 
 ## Foreground color of the statusbar in passthrough mode.
 ## Type: QssColor
 # c.colors.statusbar.passthrough.fg = 'white'
+c.colors.statusbar.passthrough.fg = norm
 
 ## Background color of the statusbar in private browsing mode.
 ## Type: QssColor
 # c.colors.statusbar.private.bg = '#666666'
+c.colors.statusbar.private.bg = norm
 
 ## Foreground color of the statusbar in private browsing mode.
 ## Type: QssColor
 # c.colors.statusbar.private.fg = 'white'
+c.colors.statusbar.private.fg = bg
 
 ## Background color of the progress bar.
 ## Type: QssColor
 # c.colors.statusbar.progress.bg = 'white'
-c.colors.statusbar.progress.bg = light_black
+c.colors.statusbar.progress.bg = norm
 
 ## Foreground color of the URL in the statusbar on error.
 ## Type: QssColor
@@ -335,24 +413,24 @@ c.colors.statusbar.progress.bg = light_black
 ## Default foreground color of the URL in the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.url.fg = 'white'
-c.colors.statusbar.url.fg = light_black
+c.colors.statusbar.url.fg = norm
 
 ## Foreground color of the URL in the statusbar for hovered links.
 ## Type: QssColor
 # c.colors.statusbar.url.hover.fg = 'aqua'
-c.colors.statusbar.url.hover.fg = dark_cyan
+c.colors.statusbar.url.hover.fg = cyan
 
 ## Foreground color of the URL in the statusbar on successful load
 ## (http).
 ## Type: QssColor
 # c.colors.statusbar.url.success.http.fg = 'white'
-c.colors.statusbar.url.success.http.fg = light_black
+c.colors.statusbar.url.success.http.fg = norm
 
 ## Foreground color of the URL in the statusbar on successful load
 ## (https).
 ## Type: QssColor
 # c.colors.statusbar.url.success.https.fg = 'lime'
-c.colors.statusbar.url.success.https.fg = dark_green
+c.colors.statusbar.url.success.https.fg = green
 
 ## Foreground color of the URL in the statusbar when there's a warning.
 ## Type: QssColor
@@ -361,14 +439,17 @@ c.colors.statusbar.url.success.https.fg = dark_green
 ## Background color of the tab bar.
 ## Type: QtColor
 # c.colors.tabs.bar.bg = '#555555'
+c.colors.tabs.bar.bg = bg_very_subtle
 
 ## Background color of unselected even tabs.
 ## Type: QtColor
 # c.colors.tabs.even.bg = 'darkgrey'
+c.colors.tabs.even.bg = bg_very_subtle
 
 ## Foreground color of unselected even tabs.
 ## Type: QtColor
 # c.colors.tabs.even.fg = 'white'
+c.colors.tabs.even.fg = norm
 
 ## Color for the tab indicator on errors.
 ## Type: QtColor
@@ -394,26 +475,32 @@ c.colors.statusbar.url.success.https.fg = dark_green
 ## Background color of unselected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.odd.bg = 'grey'
+c.colors.tabs.odd.bg = bg_very_subtle
 
 ## Foreground color of unselected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.odd.fg = 'white'
+c.colors.tabs.odd.fg = norm
 
 ## Background color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.bg = 'black'
+c.colors.tabs.selected.even.bg = bg_subtle
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.fg = 'white'
+c.colors.tabs.selected.even.fg = blue
 
 ## Background color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.bg = 'black'
+c.colors.tabs.selected.odd.bg = bg_subtle
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.fg = 'white'
+c.colors.tabs.selected.odd.fg = blue
 
 ## Background color for webpages if unset (or empty to use the theme's
 ## color).
@@ -851,7 +938,7 @@ c.content.register_protocol_handler = False
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
 # c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
-c.editor.command = ['urxvt', '-e', 'vim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
+c.editor.command = ['kitty', '-e', 'vim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -1613,6 +1700,7 @@ config.bind('<Ctrl-O>', 'back')
 # config.bind('<Ctrl-U>', 'scroll-page 0 -0.5')
 # config.bind('<Ctrl-V>', 'enter-mode passthrough')
 # config.bind('<Ctrl-W>', 'tab-close')
+config.unbind('<Ctrl-W>')
 # config.bind('<Ctrl-X>', 'navigate decrement')
 ## config.bind('<Ctrl-Y>', 'scroll up')
 config.bind('<Ctrl-Y>', 'scroll-page 0 -0.025')
@@ -1819,6 +1907,10 @@ config.unbind('L')
 
 ## Bindings for passthrough mode
 # config.bind('<Shift-Escape>', 'leave-mode', mode='passthrough')
+config.unbind('<Shift-Escape>', mode='passthrough')
+config.bind('<Ctrl-Escape>', 'leave-mode', mode='passthrough')
+config.bind('<Ctrl-H>', 'tab-prev', mode='passthrough')
+config.bind('<Ctrl-L>', 'tab-next', mode='passthrough')
 
 ## Bindings for prompt mode
 # config.bind('<Alt-B>', 'rl-backward-word', mode='prompt')
