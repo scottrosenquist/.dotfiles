@@ -15,7 +15,6 @@ set $compton_config /etc/regolith/compton/config
 
 # path to terminal. Override this to specify a custom terminal.
 set $terminal_path /usr/bin/kitty
-#set $terminal_path /usr/bin/urxvt
 
 # Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
@@ -33,30 +32,20 @@ set_from_resource $ws10 i3-wm.workspace.10.name "10"
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#hide_edge_borders smart
-
 # start a terminal
-#bindsym $mod+Return exec $terminal_path
 bindsym $mod+u exec $terminal_path
 
 # start a web browser
 #bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
-#bindsym $mod+b exec ~/.scripts/.scripts/qutebrowser
 bindsym $mod+b exec qutebrowser
 
 # notify status
 bindsym $mod+n exec ~/.scripts/notifystatus
 
 # screenshot
-#bindsym Print exec flameshot gui
 bindsym $mod+g exec flameshot gui
 
-# start Slack
-# will have to find a new one for this...
-#bindsym $mod+s exec slack
-
 # kill focused window
-#bindsym $mod+Shift+q kill
 bindsym $mod+Shift+w kill
 
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
@@ -187,15 +176,6 @@ bindsym $mod+Escape exec gnome-screensaver-command --lock
 # put the system to sleep
 bindsym $mod+Shift+s exec systemctl suspend
 
-# shortcuts for common system configuration tasks
-#bindsym $mod+c exec gnome-control-center
-#bindsym $mod+w exec gnome-control-center wifi
-#bindsym $mod+b exec gnome-control-center bluetooth
-#bindsym $mod+d exec gnome-control-center display
-#bindsym $mod+n exec gnome-control-center network
-#bindsym $mod+p exec gnome-control-center power
-#bindsym $mod+s exec gnome-control-center sound
-
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
         # These bindings trigger as soon as you enter the resize mode
@@ -234,9 +214,6 @@ new_float pixel 5
 gaps inner 5
 gaps outer 0
 
-# Only enable gaps on a workspace when there is at least one container
-#smart_gaps on
-
 set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
 set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
 set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
@@ -271,9 +248,6 @@ client.urgent           $urgent.color.border               $urgent.color.backgro
 
 # Enable popup during fullscreen
 popup_during_fullscreen smart
-
-# window focus follows your mouse movements as the mouse crosses window borders
-#focus_follows_mouse no
 
 set_from_resource $i3-wm.bar.background.color i3-wm.bar.background.color "#002b36"
 set_from_resource $i3-wm.bar.statusline.color i3-wm.bar.statusline.color "#93a1a1"
