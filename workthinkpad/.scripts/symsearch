@@ -1,0 +1,7 @@
+#! /bin/sh
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit 1
+fi
+find -L ~  -xtype l -prune -samefile $1 -exec ls -ld {} +
