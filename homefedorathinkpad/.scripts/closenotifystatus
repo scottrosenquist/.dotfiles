@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dunstify --close=666&
