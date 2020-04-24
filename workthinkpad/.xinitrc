@@ -23,5 +23,5 @@ eval $(ssh-agent)
 flameshot &
 # compton &
 # exec i3
-exec bspwm
+# exec bspwm
 # exec urxvt
