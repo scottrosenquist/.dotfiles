@@ -938,7 +938,7 @@ c.content.register_protocol_handler = False
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
 # c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
-c.editor.command = ['kitty', '-e', 'vim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
+c.editor.command = ['kitty', '-e', 'nvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -1911,6 +1911,8 @@ config.unbind('<Shift-Escape>', mode='passthrough')
 config.bind('<Ctrl-Escape>', 'leave-mode', mode='passthrough')
 config.bind('<Ctrl-H>', 'tab-prev', mode='passthrough')
 config.bind('<Ctrl-L>', 'tab-next', mode='passthrough')
+config.bind('<Ctrl-E>', 'open-editor', mode='passthrough')
+config.bind('<Ctrl-r>', 'reload', mode='passthrough')
 
 ## Bindings for prompt mode
 # config.bind('<Alt-B>', 'rl-backward-word', mode='prompt')
