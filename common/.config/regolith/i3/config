@@ -100,6 +100,11 @@ bindsym $mod+question exec --no-startup-id /usr/bin/conky-toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
+## Modify // Move to Scratchpad // <Super><Ctrl> m ##
+bindsym $mod+Ctrl+m move to scratchpad
+## Navigate // Scratchpad // <Super><Ctrl> a ##
+bindsym $mod+Ctrl+a scratchpad show
+
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+t focus mode_toggle
@@ -196,6 +201,10 @@ bindsym $mod+Shift+s exec systemctl suspend
 #bindsym $mod+n exec gnome-control-center network
 #bindsym $mod+p exec gnome-control-center power
 #bindsym $mod+s exec gnome-control-center sound
+
+# Toggle bar visibility
+## Modify // Toggle Bar // <Super> i ##
+bindsym $mod+i bar mode toggle
 
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
