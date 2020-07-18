@@ -38,4 +38,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 200
 
-#define OLED_DISABLE_TIMEOUT
+//#define OLED_DISABLE_TIMEOUT

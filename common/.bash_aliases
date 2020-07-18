@@ -8,6 +8,7 @@ alias open='xdg-open'
 
 # alias km='sudo -b kmonad start ~/.config/kmonad/thinkpadhomerowmods-refactor.kbd --fg &>/dev/null'
 
-alias km='sudo -b kmonad start ~/.config/kmonad/thinkpadhomerowmods-refactor.kbd'
+alias kmw='sudo -b kmonad-working start ~/.config/kmonad/thinkpadhomerowmods-refactor.kbd'
+alias km='sudo -b kmonad ~/.config/kmonad/thinkpadhomerowmods-refactor.kbd'
 
 alias journal='cd ~/Journal;nvim -u journal.init.vim'

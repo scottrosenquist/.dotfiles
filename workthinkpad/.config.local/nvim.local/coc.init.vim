@@ -1,5 +1,8 @@
 " My attempt at setting up coc.nvim
 
+" Set node path
+let g:coc_node_path = '/home/scott.rosenquist/.nvm/versions/node/v10.19.0/bin/node'
+
 " Load coc.nvim plugin
 packadd coc.nvim-release
 

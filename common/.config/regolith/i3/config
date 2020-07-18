@@ -36,8 +36,8 @@ floating_modifier $mod
 #hide_edge_borders smart
 
 # start a terminal
-#bindsym $mod+Return exec $terminal_path
-bindsym $mod+u exec $terminal_path
+#bindsym $mod+u exec $terminal_path
+bindsym $mod+Return exec $terminal_path
 
 # start a web browser
 #bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
@@ -56,8 +56,8 @@ bindsym $mod+g exec flameshot gui
 #bindsym $mod+s exec slack
 
 # kill focused window
-#bindsym $mod+Shift+q kill
-bindsym $mod+Shift+w kill
+bindsym $mod+Shift+q kill
+#bindsym $mod+Shift+w kill
 
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
@@ -65,6 +65,7 @@ set_from_resource $rofiTheme rofi.theme "regolith-theme"
 bindsym $mod+space exec rofi -show drun -theme $rofiTheme
 bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
 bindsym $mod+Ctrl+space exec rofi -show window -theme $rofiTheme
+bindsym $mod+a exec ~/.scripts/rofiaspell
 
 # change focus
 bindsym $mod+h focus left

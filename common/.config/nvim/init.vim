@@ -29,7 +29,7 @@ autocmd QuickFixCmdPost [^l]* cwindow
 autocmd QuickFixCmdPost l* lwindow
 
 " Auto resize windows when host is resized
-autocmd VimResized * wincmd =
+" autocmd VimResized * wincmd =
 
 " Use pencil colour theme [https://github.com/reedes/vim-colors-pencil]
 let g:pencil_terminal_italics = 1

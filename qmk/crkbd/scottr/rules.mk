@@ -1,6 +1,6 @@
-SLEEP_LED_ENABLE = no
-OLED_DRIVER_ENABLE = yes
-UNICODE_ENABLE = yes
+#SLEEP_LED_ENABLE = no
+#OLED_DRIVER_ENABLE = yes
+#UNICODE_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 
 # If you want to change the display of OLED, you need to change here
