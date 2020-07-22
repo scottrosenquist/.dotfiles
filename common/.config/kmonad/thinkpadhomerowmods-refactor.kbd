@@ -18,11 +18,6 @@
 
 ;; Define layer toggling shortcuts
 (defalias
-  ;; smb (layer-toggle symbols)
-  ;; hsk (layer-toggle haskell)
-  ;; fun (layer-toggle funckeys)
-  ;; alt/ (tap-hold 200 / lalt)
-  ;; xcp  (tap-next esc lctl)
   lts (layer-toggle shift)
   ala (tap-hold 200 a lalt)
   rlm (tap-hold 200 r lmet)
@@ -32,35 +27,17 @@
   erc (tap-hold 200 e rctl)
   irm (tap-hold 200 i rmet)
   ora (tap-hold 200 o ralt)
-  ltl (layer-toggle lower)
-  ltr (layer-toggle raise)
-  lta (layer-toggle adjust)
   num (layer-toggle number)
   nav (layer-toggle navigation)
   sym (layer-toggle symbols)
   bra (layer-toggle brackets)
-  slo (tap-hold 200 spc @ltl)
   sbr (tap-hold 200 spc @bra)
-  rra (tap-hold 200 ret @ltr)
   rsy (tap-hold 200 ret @sym)
   snu (tap-hold 200 ; @num)
   sna (tap-hold 200 / @nav)
   ses S-esc
   sre S-ret
   )
-
-;; Define macro-sequence shortcuts
-(defalias
-  >>= #(> > =)
-  ->  #(- >)
-  <-  #(< -)
-  <*> #(< * >)
-  <$> #(< $ >)
-  =>  #(= >)
-  sml #(: - \))
-  wnk #(; - \))
-  :p  #(: p)
-)
 
 ;; Define the input-layout coming from the keyboard
 (defsrc
@@ -89,36 +66,6 @@
   _    A    R    S    T    G    _    M    N    E    I    O    _    _
   _    Z    X    C    D    V    _    K    H    `    !    "         _
   _    _    _    @ses tab  :    S-/  @sre del  _    _              _
-  _    _    _              _              _    _    _    _    _    _
-                                                         _    _    _
-)
-
-(deflayer lower
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    XX   @    #    $    %    _    ^    &    *    S-9  S-0  _    _
-  _    ~    S--  +    _    _    _    _    {    }    |    XX   _    _
-  _    _    _    _    _    _    _    _    <    >    _    _         _
-  _    _    _    _    _    _    _    @lta _    _    _              _
-  _    _    _              _              _    _    _    _    _    _
-                                                         _    _    _
-)
-
-(deflayer raise
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    XX   -    =    _    _    _    _    [    ]    \    XX   _    _
-  _    _    _    _    _    _    _    _    _    _    _    _         _
-  _    _    _    _    @lta _    _    _    _    _    _              _
-  _    _    _              _              _    _    _    _    _    _
-                                                         _    _    _
-)
-
-(deflayer adjust
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    up   _    _    _    _
-  _    _    _    _    _    _    _    _    left down rght _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _         _
-  _    _    _    _    _    _    _    _    _    _    _              _
   _    _    _              _              _    _    _    _    _    _
                                                          _    _    _
 )
