@@ -4,7 +4,13 @@ alias gocode='cd ~/Code/wlw-docker/docker/wlw/source/sites/all/'
 alias vicode='(cd ~/Code/wlw-docker/docker/wlw/source/sites/all/;nvim)'
 alias goincludes='cd ~/Code/wlw-docker/docker/wlw/source/sites/default/includes/'
 alias viincludes='(cd ~/Code/wlw-docker/docker/wlw/source/sites/default/includes/;nvim .)'
+alias gov4='cd ~/Code/wlw4/'
+alias viv4='(cd ~/Code/wlw4/;nvim .)'
 
 alias volup='pactl set-sink-volume 0 +5%'
 alias voldown='pactl set-sink-volume 0 -5%'
 alias togglemute='pactl set-sink-mute 0 toggle'
+
+#alias vpn='globalprotect connect --username scott.rosenquist'
+alias vpnup='globalprotect launch-ui'
+alias vpndown='pkill globalprotect'

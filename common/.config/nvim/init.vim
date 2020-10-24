@@ -28,9 +28,6 @@ autocmd QuickFixCmdPost [^l]* cwindow
 " Auto open locationlist window
 autocmd QuickFixCmdPost l* lwindow
 
-" Auto resize windows when host is resized
-" autocmd VimResized * wincmd =
-
 " Use pencil colour theme [https://github.com/reedes/vim-colors-pencil]
 let g:pencil_terminal_italics = 1
 let g:pencil_neutral_headings = 1
@@ -58,6 +55,16 @@ set fileignorecase
 " Make wildignore case insensitive
 set wildignorecase
 
+" Don't show intro message when starting vim
+set shortmess+=I
+
+" Allow closing fzf with esc
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
+
+" Unload (:bdelete) current window
+nnoremap <silent> <C-W><C-U> :bdelete<CR>
+nnoremap <silent> <C-W>u :bdelete<CR>
+
 " Function to source only if file exists
 function! SourceIfExists(file)
   if filereadable(expand(a:file))
@@ -70,3 +77,7 @@ call SourceIfExists("~/.config/nvim/coc.init.vim")
 
 " Source mercatus.init.vim
 call SourceIfExists("~/.config/nvim/mercatus.init.vim")
+
+" Source fzf.init.vim
+call SourceIfExists("~/.config/nvim/fzf.vim")
+call SourceIfExists("~/.config/nvim/fzf.init.vim")

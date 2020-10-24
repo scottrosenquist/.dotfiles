@@ -166,6 +166,10 @@ c.colors.completion.item.selected.border.top = visual
 # c.colors.completion.item.selected.fg = 'black'
 c.colors.completion.item.selected.fg = norm
 
+## Foreground color of the matched text in the selected completion item.
+## Type: QtColor
+# c.colors.completion.item.selected.match.fg = '#ff4444'
+
 ## Foreground color of the matched text in the completion.
 ## Type: QssColor
 # c.colors.completion.match.fg = '#ff4444'
@@ -186,14 +190,35 @@ c.colors.completion.scrollbar.bg = bg
 # c.colors.completion.scrollbar.fg = 'white'
 c.colors.completion.scrollbar.fg = norm_subtle
 
+## Background color of the context menu. If set to null, the Qt default
+## is used.
+## Type: QssColor
+# c.colors.contextmenu.menu.bg = None
+
+## Foreground color of the context menu. If set to null, the Qt default
+## is used.
+## Type: QssColor
+# c.colors.contextmenu.menu.fg = None
+
+## Background color of the context menu's selected item. If set to null,
+## the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.selected.bg = None
+
+## Foreground color of the context menu's selected item. If set to null,
+## the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.selected.fg = None
+
 ## Background color for the download bar.
 ## Type: QssColor
 # c.colors.downloads.bar.bg = 'black'
-c.colors.downloads.bar.bg = black
+c.colors.downloads.bar.bg = bg
 
 ## Background color for downloads with errors.
 ## Type: QtColor
 # c.colors.downloads.error.bg = 'red'
+c.colors.downloads.error.bg = red
 
 ## Foreground color for downloads with errors.
 ## Type: QtColor
@@ -203,6 +228,7 @@ c.colors.downloads.error.fg = norm
 ## Color gradient start for download backgrounds.
 ## Type: QtColor
 # c.colors.downloads.start.bg = '#0000aa'
+c.colors.downloads.start.bg = blue
 
 ## Color gradient start for download text.
 ## Type: QtColor
@@ -212,6 +238,7 @@ c.colors.downloads.start.fg = norm
 ## Color gradient stop for download backgrounds.
 ## Type: QtColor
 # c.colors.downloads.stop.bg = '#00aa00'
+c.colors.downloads.stop.bg = green
 
 ## Color gradient end for download text.
 ## Type: QtColor
@@ -240,17 +267,17 @@ c.colors.downloads.stop.fg = norm
 ## for transparency.
 ## Type: QssColor
 # c.colors.hints.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 247, 133, 0.8), stop:1 rgba(255, 197, 66, 0.8))'
-c.colors.hints.bg = yellow
+c.colors.hints.bg = visual
 
 ## Font color for hints.
 ## Type: QssColor
 # c.colors.hints.fg = 'black'
-c.colors.hints.fg = light_black
+c.colors.hints.fg = black
 
 ## Font color for the matched part of hints.
 ## Type: QssColor
 # c.colors.hints.match.fg = 'green'
-c.colors.hints.match.fg = green
+c.colors.hints.match.fg = medium_gray
 
 ## Background color of the keyhint widget.
 ## Type: QssColor
@@ -267,6 +294,7 @@ c.colors.hints.match.fg = green
 ## Background color of an error message.
 ## Type: QssColor
 # c.colors.messages.error.bg = 'red'
+c.colors.messages.error.bg = red
 
 ## Border color of an error message.
 ## Type: QssColor
@@ -295,6 +323,7 @@ c.colors.messages.info.fg = norm
 ## Background color of a warning message.
 ## Type: QssColor
 # c.colors.messages.warning.bg = 'darkorange'
+c.colors.messages.warning.bg = orange
 
 ## Border color of a warning message.
 ## Type: QssColor
@@ -326,6 +355,7 @@ c.colors.prompts.fg = norm
 ## Background color of the statusbar in caret mode.
 ## Type: QssColor
 # c.colors.statusbar.caret.bg = 'purple'
+c.colors.statusbar.caret.bg = light_purple
 
 ## Foreground color of the statusbar in caret mode.
 ## Type: QssColor
@@ -335,6 +365,7 @@ c.colors.statusbar.caret.fg = norm
 ## Background color of the statusbar in caret mode with a selection.
 ## Type: QssColor
 # c.colors.statusbar.caret.selection.bg = '#a12dff'
+c.colors.statusbar.caret.selection.bg = light_purple
 
 ## Foreground color of the statusbar in caret mode with a selection.
 ## Type: QssColor
@@ -364,7 +395,8 @@ c.colors.statusbar.command.private.fg = bg
 ## Background color of the statusbar in insert mode.
 ## Type: QssColor
 # c.colors.statusbar.insert.bg = 'darkgreen'
-c.colors.statusbar.insert.bg = bg_very_subtle
+# c.colors.statusbar.insert.bg = bg_very_subtle
+c.colors.statusbar.insert.bg = light_green
 
 ## Foreground color of the statusbar in insert mode.
 ## Type: QssColor
@@ -409,11 +441,12 @@ c.colors.statusbar.progress.bg = norm
 ## Foreground color of the URL in the statusbar on error.
 ## Type: QssColor
 # c.colors.statusbar.url.error.fg = 'orange'
+c.colors.statusbar.url.error.fg = red
 
 ## Default foreground color of the URL in the statusbar.
 ## Type: QssColor
 # c.colors.statusbar.url.fg = 'white'
-c.colors.statusbar.url.fg = norm
+c.colors.statusbar.url.fg = green
 
 ## Foreground color of the URL in the statusbar for hovered links.
 ## Type: QssColor
@@ -424,44 +457,48 @@ c.colors.statusbar.url.hover.fg = cyan
 ## (http).
 ## Type: QssColor
 # c.colors.statusbar.url.success.http.fg = 'white'
-c.colors.statusbar.url.success.http.fg = norm
+c.colors.statusbar.url.success.http.fg = orange
 
 ## Foreground color of the URL in the statusbar on successful load
 ## (https).
 ## Type: QssColor
 # c.colors.statusbar.url.success.https.fg = 'lime'
-c.colors.statusbar.url.success.https.fg = green
+c.colors.statusbar.url.success.https.fg = norm
 
 ## Foreground color of the URL in the statusbar when there's a warning.
 ## Type: QssColor
 # c.colors.statusbar.url.warn.fg = 'yellow'
+c.colors.statusbar.url.warn.fg = yellow
 
 ## Background color of the tab bar.
 ## Type: QtColor
 # c.colors.tabs.bar.bg = '#555555'
-c.colors.tabs.bar.bg = bg_very_subtle
+c.colors.tabs.bar.bg = bg_subtle
 
 ## Background color of unselected even tabs.
 ## Type: QtColor
 # c.colors.tabs.even.bg = 'darkgrey'
-c.colors.tabs.even.bg = bg_very_subtle
+c.colors.tabs.even.bg = bg_subtle
 
 ## Foreground color of unselected even tabs.
 ## Type: QtColor
 # c.colors.tabs.even.fg = 'white'
-c.colors.tabs.even.fg = norm
+c.colors.tabs.even.fg = norm_subtle
 
 ## Color for the tab indicator on errors.
 ## Type: QtColor
 # c.colors.tabs.indicator.error = '#ff0000'
+c.colors.tabs.indicator.error = red
 
 ## Color gradient start for the tab indicator.
 ## Type: QtColor
 # c.colors.tabs.indicator.start = '#0000aa'
+c.colors.tabs.indicator.start = green
 
 ## Color gradient end for the tab indicator.
 ## Type: QtColor
 # c.colors.tabs.indicator.stop = '#00aa00'
+c.colors.tabs.indicator.stop = medium_gray
 
 ## Color gradient interpolation system for the tab indicator.
 ## Type: ColorSystem
@@ -471,41 +508,80 @@ c.colors.tabs.even.fg = norm
 ##   - hsl: Interpolate in the HSL color system.
 ##   - none: Don't show a gradient.
 # c.colors.tabs.indicator.system = 'rgb'
+c.colors.tabs.indicator.system = 'none'
 
 ## Background color of unselected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.odd.bg = 'grey'
-c.colors.tabs.odd.bg = bg_very_subtle
+c.colors.tabs.odd.bg = bg_subtle
 
 ## Foreground color of unselected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.odd.fg = 'white'
-c.colors.tabs.odd.fg = norm
+c.colors.tabs.odd.fg = norm_subtle
+
+## Background color of pinned unselected even tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.even.bg = 'darkseagreen'
+
+## Foreground color of pinned unselected even tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.even.fg = 'white'
+
+## Background color of pinned unselected odd tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.odd.bg = 'seagreen'
+
+## Foreground color of pinned unselected odd tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.odd.fg = 'white'
+
+## Background color of pinned selected even tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.selected.even.bg = 'black'
+
+## Foreground color of pinned selected even tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.selected.even.fg = 'white'
+
+## Background color of pinned selected odd tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.selected.odd.bg = 'black'
+
+## Foreground color of pinned selected odd tabs.
+## Type: QtColor
+# c.colors.tabs.pinned.selected.odd.fg = 'white'
 
 ## Background color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.bg = 'black'
-c.colors.tabs.selected.even.bg = bg_subtle
+c.colors.tabs.selected.even.bg = bg
 
 ## Foreground color of selected even tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.even.fg = 'white'
-c.colors.tabs.selected.even.fg = blue
+# c.colors.tabs.selected.even.fg = blue
+c.colors.tabs.selected.even.fg = norm
 
 ## Background color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.bg = 'black'
-c.colors.tabs.selected.odd.bg = bg_subtle
+c.colors.tabs.selected.odd.bg = bg
 
 ## Foreground color of selected odd tabs.
 ## Type: QtColor
 # c.colors.tabs.selected.odd.fg = 'white'
-c.colors.tabs.selected.odd.fg = blue
+# c.colors.tabs.selected.odd.fg = blue
+c.colors.tabs.selected.odd.fg = norm
 
 ## Background color for webpages if unset (or empty to use the theme's
 ## color).
 ## Type: QtColor
 # c.colors.webpage.bg = 'white'
+
+## Force `prefers-color-scheme: dark` colors for websites.
+## Type: Bool
+# c.colors.webpage.prefers_color_scheme_dark = False
 
 ## Number of commands to save in the command history. 0: no history / -1:
 ## unlimited
@@ -524,6 +600,15 @@ c.colors.tabs.selected.odd.fg = blue
 ## Minimum amount of characters needed to update completions.
 ## Type: Int
 # c.completion.min_chars = 1
+
+## Which categories to show (in which order) in the :open completion.
+## Type: FlagList
+## Valid values:
+##   - searchengines
+##   - quickmarks
+##   - bookmarks
+##   - history
+# c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history']
 
 ## Move on to the next part when there's only one possible completion
 ## left.
@@ -853,6 +938,11 @@ c.content.cookies.accept = 'all'
 # c.content.register_protocol_handler = 'ask'
 c.content.register_protocol_handler = False
 
+## Enable quirks (such as faked user agent headers) needed to get
+## specific sites to work properly.
+## Type: Bool
+# c.content.site_specific_quirks = True
+
 ## Validate SSL handshakes.
 ## Type: BoolAsk
 ## Valid values:
@@ -911,6 +1001,7 @@ c.content.register_protocol_handler = False
 ##   - filename: Show only download filename.
 ##   - both: Show download path and filename.
 # c.downloads.location.suggestion = 'path'
+c.downloads.location.suggestion = 'both'
 
 ## Default program used to open downloads. If null, the default internal
 ## handler is used. Any `{}` in the string will be expanded to the
@@ -924,6 +1015,7 @@ c.content.register_protocol_handler = False
 ##   - top
 ##   - bottom
 # c.downloads.position = 'top'
+c.downloads.position = 'bottom'
 
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
@@ -952,9 +1044,28 @@ c.editor.command = ['kitty', '-e', 'nvim', '-f', '{file}', '-c', 'normal {line}G
 ## Type: Font
 # c.fonts.completion.entry = '10pt monospace'
 
+## Font used for the context menu. If set to null, the Qt default is
+## used.
+## Type: Font
+# c.fonts.contextmenu = None
+
 ## Font used for the debugging console.
 ## Type: QtFont
 # c.fonts.debug_console = '10pt monospace'
+
+## Default font families to use. Whenever "default_family" is used in a
+## font setting, it's replaced with the fonts listed here. If set to an
+## empty value, a system-specific monospace default is used.
+## Type: List of Font, or Font
+# c.fonts.default_family = []
+c.fonts.default_family = 'JetBrains Mono'
+
+## Default font size to use. Whenever "default_size" is used in a font
+## setting, it's replaced with the size listed here. Valid values are
+## either a float value with a "pt" suffix, or an integer value with a
+## "px" suffix.
+## Type: String
+# c.fonts.default_size = '10pt'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -979,12 +1090,6 @@ c.editor.command = ['kitty', '-e', 'nvim', '-f', '{file}', '-c', 'normal {line}G
 ## Font used for warning messages.
 ## Type: Font
 # c.fonts.messages.warning = '10pt monospace'
-
-## Default monospace fonts. Whenever "monospace" is used in a font
-## setting, it's replaced with the fonts listed here.
-## Type: Font
-# c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
-c.fonts.monospace = 'JetBrains Mono'
 
 ## Font used for prompts.
 ## Type: Font
@@ -1056,6 +1161,7 @@ c.fonts.monospace = 'JetBrains Mono'
 ## CSS border value for hints.
 ## Type: String
 # c.hints.border = '1px solid #E3BE23'
+c.hints.border = 'none'
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
@@ -1075,6 +1181,10 @@ c.hints.chars = 'arstdhneio'
 ## Hide unmatched hints in rapid mode.
 ## Type: Bool
 # c.hints.hide_unmatched_rapid_hints = True
+
+## Leave hint mode when starting a new page load.
+## Type: Bool
+# c.hints.leave_on_load = True
 
 ## Minimum number of characters used for hint strings.
 ## Type: Int
@@ -1100,6 +1210,11 @@ c.hints.chars = 'arstdhneio'
 ## number hints.
 ## Type: Bool
 # c.hints.scatter = True
+
+## CSS selectors used to determine which elements on a page should have
+## hints.
+## Type: Dict
+# c.hints.selectors = {'all': ['a', 'area', 'textarea', 'select', 'input:not([type="hidden"])', 'button', 'frame', 'iframe', 'img', 'link', 'summary', '[onclick]', '[onmousedown]', '[role="link"]', '[role="option"]', '[role="button"]', '[ng-click]', '[ngClick]', '[data-ng-click]', '[x-ng-click]', '[tabindex]'], 'links': ['a[href]', 'area[href]', 'link[href]', '[role="link"][href]'], 'images': ['img'], 'media': ['audio', 'img', 'video'], 'url': ['[src]', '[href]'], 'inputs': ['input[type="text"]', 'input[type="date"]', 'input[type="datetime-local"]', 'input[type="email"]', 'input[type="month"]', 'input[type="number"]', 'input[type="password"]', 'input[type="search"]', 'input[type="tel"]', 'input[type="time"]', 'input[type="url"]', 'input[type="week"]', 'input:not([type])', 'textarea']}
 
 ## Make characters in hint strings uppercase.
 ## Type: Bool
@@ -1136,6 +1251,13 @@ c.hints.chars = 'arstdhneio'
 ## after loading the page.
 ## Type: Bool
 # c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = True
+
+## Leave insert mode when starting a new page load. Patterns may be
+## unreliable on this setting, and they may match the url you are
+## navigating to, or the URL you are navigating from.
+## Type: Bool
+# c.input.insert_mode.leave_on_load = True
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
@@ -1151,6 +1273,7 @@ c.hints.chars = 'arstdhneio'
 ## Type: Int
 # c.input.partial_timeout = 5000
 # c.input.partial_timeout = 0
+c.input.partial_timeout = 1000000
 
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
@@ -1177,7 +1300,8 @@ c.hints.chars = 'arstdhneio'
 ## Type: Int
 # c.keyhint.delay = 500
 # c.keyhint.delay = 0
-c.keyhint.delay = 1000000
+# c.keyhint.delay = 1000000
+c.keyhint.delay = 1000
 
 ## Rounding radius (in pixels) for the edges of the keyhint dialog.
 ## Type: Int
@@ -1187,6 +1311,8 @@ c.keyhint.delay = 1000000
 ## to 0 to never clear messages.
 ## Type: Int
 # c.messages.timeout = 2000
+c.messages.timeout = 5000
+# c.messages.timeout = 0
 
 ## How to open links in an existing instance if a new one is launched.
 ## This happens when e.g. opening a link from a terminal. See
@@ -1232,6 +1358,13 @@ c.new_instance_open_target = 'tab-silent'
 ## running QtWebEngine on Wayland.
 ## Type: String
 # c.qt.force_platform = None
+
+## Force a Qt platformtheme to use. This sets the `QT_QPA_PLATFORMTHEME`
+## environment variable which controls dialogs like the filepicker. By
+## default, Qt determines the platform theme based on the desktop
+## environment.
+## Type: String
+# c.qt.force_platformtheme = None
 
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers and can be useful in other
@@ -1357,6 +1490,7 @@ c.new_instance_open_target = 'tab-silent'
 ##   - uk-UA: Ukrainian (Ukraine)
 ##   - vi-VN: Vietnamese (Viet Nam)
 # c.spellcheck.languages = []
+# c.spellcheck.languages = [en-CA]
 
 ## Hide the statusbar unless a message is shown.
 ## Type: Bool
@@ -1384,6 +1518,7 @@ c.new_instance_open_target = 'tab-silent'
 ##   - keypress: Display pressed keys when composing a vi command.
 ##   - progress: Progress bar for the current page loading.
 # c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
+c.statusbar.widgets = ['history', 'keypress', 'url', 'history', 'scroll']
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
@@ -1420,13 +1555,21 @@ c.tabs.background = True
 ##   - pinned: Show favicons only on pinned tabs.
 # c.tabs.favicons.show = 'always'
 
+## Maximum stack size to remember for tab switches (-1 for no maximum).
+## Type: Int
+# c.tabs.focus_stack_size = 10
+
 ## Padding (in pixels) for tab indicators.
 ## Type: Padding
 # c.tabs.indicator.padding = {'top': 2, 'bottom': 2, 'left': 0, 'right': 4}
+#c.tabs.indicator.padding = {'top': 7, 'bottom': 7, 'left': 0, 'right': 3}
+c.tabs.indicator.padding = {'top': 0, 'bottom': 0, 'left': 0, 'right': 5}
 
 ## Width (in pixels) of the progress indicator (0 to disable).
 ## Type: Int
 # c.tabs.indicator.width = 3
+# c.tabs.indicator.width = 5
+c.tabs.indicator.width = 2
 
 ## How to behave when the last tab is closed.
 ## Type: String
@@ -1447,6 +1590,7 @@ c.tabs.last_close = 'close'
 ## tab contents, or smaller than tabs.min_width.
 ## Type: Int
 # c.tabs.max_width = -1
+c.tabs.max_width = 240
 
 ## Minimum width (in pixels) of tabs (-1 for the default minimum size
 ## behavior). This setting only applies when tabs are horizontal. This
@@ -1462,13 +1606,15 @@ c.tabs.last_close = 'close'
 ##   - restore: Restore previously saved mode.
 ##   - normal: Always revert to normal mode.
 # c.tabs.mode_on_change = 'normal'
+c.tabs.mode_on_change = 'restore'
 
 ## Switch between tabs using the mouse wheel.
 ## Type: Bool
 # c.tabs.mousewheel_switching = True
 c.tabs.mousewheel_switching = False
 
-## Position of new tabs opened from another tab.
+## Position of new tabs opened from another tab. See
+## `tabs.new_position.stacking` for controlling stacking behavior.
 ## Type: NewTabPosition
 ## Valid values:
 ##   - prev: Before the current tab.
@@ -1477,7 +1623,14 @@ c.tabs.mousewheel_switching = False
 ##   - last: At the end.
 # c.tabs.new_position.related = 'next'
 
-## Position of new tabs which aren't opened from another tab.
+## Stack related tabs on top of each other when opened consecutively.
+## Only applies for `next` and `prev` values of
+## `tabs.new_position.related` and `tabs.new_position.unrelated`.
+## Type: Bool
+# c.tabs.new_position.stacking = True
+
+## Position of new tabs which are not opened from another tab. See
+## `tabs.new_position.stacking` for controlling stacking behavior.
 ## Type: NewTabPosition
 ## Valid values:
 ##   - prev: Before the current tab.
@@ -1489,6 +1642,11 @@ c.tabs.mousewheel_switching = False
 ## Padding (in pixels) around text for tabs.
 ## Type: Padding
 # c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 5, 'right': 5}
+c.tabs.padding = {'top': 0, 'bottom': 0, 'left': 0, 'right': 5}
+
+## Force pinned tabs to stay at fixed URL.
+## Type: Bool
+# c.tabs.pinned.frozen = True
 
 ## Shrink pinned tabs down to their contents.
 ## Type: Bool
@@ -1540,23 +1698,33 @@ c.tabs.pinned.shrink = False
 
 ## Format to use for the tab title. The following placeholders are
 ## defined:  * `{perc}`: Percentage as a string like `[10%]`. *
-## `{perc_raw}`: Raw percentage, e.g. `10`. * `{title}`: Title of the
-## current web page. * `{title_sep}`: The string ` - ` if a title is set,
-## empty otherwise. * `{index}`: Index of this tab. * `{id}`: Internal
-## tab ID of this tab. * `{scroll_pos}`: Page scroll position. *
+## `{perc_raw}`: Raw percentage, e.g. `10`. * `{current_title}`: Title of
+## the current web page. * `{title_sep}`: The string ` - ` if a title is
+## set, empty otherwise. * `{index}`: Index of this tab. * `{id}`:
+## Internal tab ID of this tab. * `{scroll_pos}`: Page scroll position. *
 ## `{host}`: Host of the current web page. * `{backend}`: Either
 ## ''webkit'' or ''webengine'' * `{private}`: Indicates when private mode
 ## is enabled. * `{current_url}`: URL of the current web page. *
 ## `{protocol}`: Protocol (http/https/...) of the current web page. *
 ## `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-# c.tabs.title.format = '{audio}{index}: {title}'
+# c.tabs.title.format = '{audio}{index}: {current_title}'
 
 ## Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.
 ## Type: FormatString
 # c.tabs.title.format_pinned = '{index}'
-### c.tabs.title.format_pinned = '{audio}{index}P: {title}'
+### c.tabs.title.format_pinned = '{audio}{index}P {title}'
+
+## Show tooltips on tabs. Note this setting only affects windows opened
+## after it has been set.
+## Type: Bool
+# c.tabs.tooltips = True
+
+## Number of close tab actions to remember, per window (-1 for no
+## maximum).
+## Type: Int
+# c.tabs.undo_stack_size = 100
 
 ## Width (in pixels or as percentage of the window) of the tab bar if
 ## it's vertical.
@@ -1629,7 +1797,7 @@ c.url.start_pages = ['about:blank']
 ## Default zoom level.
 ## Type: Perc
 # c.zoom.default = '100%'
-### c.zoom.default = '150%'
+# c.zoom.default = '150%'
 
 ## Available zoom levels.
 ## Type: List of Perc
@@ -1858,6 +2026,7 @@ config.unbind('L')
 # config.bind('j', 'move-to-next-line', mode='caret')
 # config.bind('k', 'move-to-prev-line', mode='caret')
 # config.bind('l', 'move-to-next-char', mode='caret')
+# config.bind('o', 'reverse-selection', mode='caret')
 # config.bind('v', 'toggle-selection', mode='caret')
 # config.bind('w', 'move-to-next-word', mode='caret')
 # config.bind('y', 'yank selection', mode='caret')

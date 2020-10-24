@@ -12,3 +12,5 @@ alias kmw='sudo -b kmonad-working start ~/.config/kmonad/thinkpadhomerowmods-ref
 alias km='sudo -b kmonad ~/.config/kmonad/thinkpadhomerowmods-refactor.kbd'
 
 alias journal='cd ~/Journal;nvim -u journal.init.vim'
+
+alias hc='herbstclient'
