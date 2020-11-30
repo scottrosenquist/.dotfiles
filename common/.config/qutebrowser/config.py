@@ -719,6 +719,7 @@ c.content.cookies.accept = 'all'
 ## describing an encoding such as _utf-8_, _iso-8859-1_, etc.
 ## Type: String
 # c.content.default_encoding = 'iso-8859-1'
+c.content.default_encoding = 'iso-8859-1'
 
 ## Allow websites to share screen content. On Qt < 5.10, a dialog box is
 ## always displayed, even if this is set to "true".
@@ -1418,6 +1419,7 @@ c.new_instance_open_target = 'tab-silent'
 ## work with the `:scroll-px` command.
 ## Type: Bool
 # c.scrolling.smooth = False
+c.scrolling.smooth = False
 
 ## When to find text on a page case-insensitively.
 ## Type: String
@@ -2084,6 +2086,7 @@ config.bind('<Ctrl-H>', 'tab-prev', mode='passthrough')
 config.bind('<Ctrl-L>', 'tab-next', mode='passthrough')
 config.bind('<Ctrl-E>', 'open-editor', mode='passthrough')
 config.bind('<Ctrl-r>', 'reload', mode='passthrough')
+config.bind('<Ctrl-T>', 'open -t', mode='passthrough')
 
 ## Bindings for prompt mode
 # config.bind('<Alt-B>', 'rl-backward-word', mode='prompt')

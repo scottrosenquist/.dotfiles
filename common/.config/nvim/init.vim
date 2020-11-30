@@ -81,3 +81,6 @@ call SourceIfExists("~/.config/nvim/mercatus.init.vim")
 " Source fzf.init.vim
 call SourceIfExists("~/.config/nvim/fzf.vim")
 call SourceIfExists("~/.config/nvim/fzf.init.vim")
+
+" Source firenvim.init.vim
+call SourceIfExists("~/.config/nvim/firenvim.init.vim")
