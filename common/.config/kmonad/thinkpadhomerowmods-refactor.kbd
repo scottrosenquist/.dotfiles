@@ -52,9 +52,9 @@
 
 (deflayer colemak
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    q    w    f    p    b    _    j    l    u    y    _    _    _
-  _    @ala @rlm @slc @tls g    _    m    @nrs @erc @irm @ora _    _
-  _    z    x    c    d    v    _    k    h    ,    .    '         _
+  _    z    f    r    p    b    _    j    l    u    y    q    _    _
+  _    @ala lmet @slc @tls g    _    m    @nrs @erc @irm @ora _    _
+  _    v    x    c    d    w    _    k    h    ,    .    '         _
   _    _    _    esc  @sbr @snu @sna @rsy bspc _    _              _
   _    _    _              _              _    _    _    _    _    _
                                                          _    _    _
@@ -62,9 +62,9 @@
 
 (deflayer shift
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    Q    W    F    P    B    _    J    L    U    Y    _    _    _
-  _    A    R    S    T    G    _    M    N    E    I    O    _    _
-  _    Z    X    C    D    V    _    K    H    `    !    "         _
+  _    Z    F    R    P    B    _    J    L    U    Y    Q    _    _
+  _    A    _    S    T    G    _    M    N    E    I    O    _    _
+  _    V    X    C    D    W    _    K    H    `    !    "         _
   _    _    _    @ses tab  :    S-/  @sre del  _    _              _
   _    _    _              _              _    _    _    _    _    _
                                                          _    _    _

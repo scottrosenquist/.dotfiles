@@ -1166,7 +1166,7 @@ c.hints.border = 'none'
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
-c.hints.chars = 'arstdhneio'
+c.hints.chars = 'frpnstxcdluyeih,.'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
